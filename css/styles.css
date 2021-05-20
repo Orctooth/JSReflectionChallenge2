@@ -1,0 +1,83 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+* img {
+  border-radius: 50%;
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+}
+* h1 {
+  font-family: "Nerko One", cursive;
+  font-size: 64px;
+}
+* button {
+  border: none;
+  border-radius: 3px;
+  height: 50px;
+  width: auto;
+  padding: 10px 15px;
+  font-weight: bold;
+  color: #fff;
+  background: #66CC00;
+}
+* button:hover {
+  cursor: pointer;
+  background: #00aa00;
+}
+
+html {
+  background: #FFFFCC;
+  overflow-x: hidden;
+}
+
+header {
+  height: 100px;
+  background: #66CC00;
+  padding: 30px 30px;
+  margin: 0 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header > h1 {
+  margin: 0 auto;
+  color: #fff;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+}
+main > img, main button, main form {
+  margin-top: 30px;
+}
+main > form {
+  width: 300px;
+  margin: 30px auto;
+  text-align: left;
+}
+main > form > input {
+  width: 100%;
+}
+main > form > label {
+  text-align: left;
+}
+
+#submissions {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 30px;
+  margin: 0 auto;
+}
+#submissions > div {
+  display: block;
+  width: 20%;
+  margin: 20px auto;
+}
+#submissions > div > img {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

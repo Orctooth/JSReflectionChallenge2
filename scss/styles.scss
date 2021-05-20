@@ -1,0 +1,87 @@
+*{
+    img{
+        border-radius: 50%;
+        box-shadow: 6px 6px  rgba(0,0,0,0.1);
+    }
+    font-family: 'Roboto', sans-serif;
+
+    h1{
+        font-family: 'Nerko One', cursive;
+        font-size: 64px;
+    }
+
+    button{
+        border:none;
+        border-radius: 3px;
+        height: 50px;
+        width: auto;
+        padding: 10px 15px;
+        font-weight: bold;
+        color:#fff;
+        background:#66CC00;
+        &:hover{
+            cursor: pointer;
+            background:#00aa00;
+        }
+    }
+
+}
+
+html{
+    background: #FFFFCC;
+    overflow-x: hidden;
+}
+
+header{
+    height: 100px;
+    background:#66CC00;
+    padding: 30px 30px;
+    margin: 0 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    & > h1{
+        margin: 0 auto;
+        color: #fff;
+    }
+}
+
+main{
+    width: 100%;
+    //padding: 30px 30px;
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: center;
+    & > img, button, form{
+        margin-top: 30px;
+    }
+    &  >form{
+        width: 300px;
+        margin: 30px auto;
+        text-align: left;
+        & > input{
+            width: 100%;
+        }
+        & > label{
+            text-align: left;
+        }
+    }
+}
+
+#submissions{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 30px 30px;
+    margin: 0 auto;
+    
+
+    & > div{
+        display: block;
+        width: 20%;
+        margin: 20px auto;
+        & > img{
+            margin-top: 20px;
+        }
+    }
+}
