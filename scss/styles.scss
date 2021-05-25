@@ -25,6 +25,15 @@
         }
     }
 
+    input::-ms-clear {
+        display: none;
+    }
+
+    input::-ms-appearance {
+        display: none;
+    }
+
+
 }
 
 html{
@@ -33,28 +42,39 @@ html{
 }
 
 header{
-    height: 100px;
+    height: 80px;
     background:#66CC00;
-    padding: 30px 30px;
+    padding: 40px 30px;
     margin: 0 0;
     width: 100%;
     position: fixed;
+    
     top: 0;
     left: 0;
     & > h1{
+        
         margin: 0 auto;
         color: #fff;
     }
 }
 
 main{
+    display: flex;
     width: 100%;
     //padding: 30px 30px;
-    margin: 0 auto;
+    margin: 0px auto;
     margin-top: 200px;
     text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
     & > img, button, form{
         margin-top: 30px;
+        display: block;
+        margin: 0 auto;
+    }
+    & > img{
+        height: 300px;
+        width: 300px;
     }
     &  >form{
         width: 300px;
@@ -67,21 +87,32 @@ main{
             text-align: left;
         }
     }
+    & > button{
+        width: 150px;
+    }
 }
 
-#submissions{
-    display:flex;
-    flex-wrap: wrap;
-    padding: 30px 30px;
-    margin: 0 auto;
-    
-
-    & > div{
-        display: block;
-        width: 20%;
-        margin: 20px auto;
-        & > img{
-            margin-top: 20px;
+#sub-holder{
+    display: block;
+    width: 100%;
+    & > #submissions{
+        width: 100%;
+        display:flex;
+        flex-wrap: wrap;
+        padding: 30px 30px;
+        margin: 0 auto;
+        background: #CCFF99;
+        box-shadow: 10px -10px rgba(0,0,0,0.1);
+        text-align: center;
+        & > div{
+            display: block;
+            width: 20%;
+            margin: 20px auto;
+            
+            & > img{
+                margin-top: 20px;
+            }
         }
     }
 }
+

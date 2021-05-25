@@ -23,6 +23,12 @@
   cursor: pointer;
   background: #00aa00;
 }
+* input::-ms-clear {
+  display: none;
+}
+* input::-ms-appearance {
+  display: none;
+}
 
 html {
   background: #FFFFCC;
@@ -30,9 +36,9 @@ html {
 }
 
 header {
-  height: 100px;
+  height: 80px;
   background: #66CC00;
-  padding: 30px 30px;
+  padding: 40px 30px;
   margin: 0 0;
   width: 100%;
   position: fixed;
@@ -45,13 +51,22 @@ header > h1 {
 }
 
 main {
+  display: flex;
   width: 100%;
-  margin: 0 auto;
+  margin: 0px auto;
   margin-top: 200px;
   text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 main > img, main button, main form {
   margin-top: 30px;
+  display: block;
+  margin: 0 auto;
+}
+main > img {
+  height: 300px;
+  width: 300px;
 }
 main > form {
   width: 300px;
@@ -64,19 +79,30 @@ main > form > input {
 main > form > label {
   text-align: left;
 }
+main > button {
+  width: 150px;
+}
 
-#submissions {
+#sub-holder {
+  display: block;
+  width: 100%;
+}
+#sub-holder > #submissions {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 30px 30px;
   margin: 0 auto;
+  background: #CCFF99;
+  box-shadow: 10px -10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-#submissions > div {
+#sub-holder > #submissions > div {
   display: block;
   width: 20%;
   margin: 20px auto;
 }
-#submissions > div > img {
+#sub-holder > #submissions > div > img {
   margin-top: 20px;
 }
 

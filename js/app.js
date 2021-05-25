@@ -1,3 +1,7 @@
+$("#email").submit(function(e) {
+    e.preventDefault();
+});
+
 function ValidateEmail(inputText){
     if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(document.getElementById("email").value)){
     return (true)
@@ -7,29 +11,40 @@ function ValidateEmail(inputText){
 }
 
 
-
-
+let rando;
+let retrieve;
 //function that is called back to create new url when user
 //clicks new image button
-function switchImage(newURL) {
-    document.getElementById('image').src= newURL; 
+function switchImage() {
+    rando = (Math.floor(Math.random() * 1000)+ 1);
+    let newURL = `https://picsum.photos/id/${rando}/200`;
+    document.getElementById('image').src= newURL;
+    return newURL;
 }
-let rando;
+
 
 function generateImage(){
-    let myPromise = new Promise(function(myResolve, myReject) {
-        myResolve(); // when successful
-        myReject();  // when error
+    
+    var imgReq = new XMLHttpRequest();
+    imgReq.open("GET", newURL);
+    
+    const myPromise = new Promise(function(myResolve, myReject) {
+        switchImage();
+        setTimeout(()=>{
+            if(newURL){
+                myResolve('image retrieved');
+            }else{
+                myReject('image not retrieved');
+            }
+            
+        },1000);
+        
+        //myReject( alert('image request failed please try again'));  // when error
+        
+       
     });
     
-    myPromise.then(
-        function(value) {
-            rando = (Math.floor(Math.random() * 1000)+ 1).toString();
-            let newURL = 'https://picsum.photos/id/' + rando + '/'+'200';
-             switchImage(newURL);
-            },
-        function(error) { alert('image request failed please try again')}
-    );
+    myPromise.then(function(value) {switchImage()}).catch(function(error) { alert('image request failed please try again')});
 }
 
 
@@ -48,9 +63,8 @@ class EmailPic{
 
 let profiles= [];
 let profileDivs =[];
-//recieves user email input
-document.getElementById('submit').addEventListener('click', () =>{
-    
+
+function submission(){
     let newEmail= document.getElementById("email").value;
     if(ValidateEmail(newEmail)===false){
         return;
@@ -84,4 +98,10 @@ document.getElementById('submit').addEventListener('click', () =>{
     
 
     generateImage();
+}
+//recieves user email input
+document.getElementById('submit').addEventListener('click', () =>{
+    submission();
+    
 });
+
