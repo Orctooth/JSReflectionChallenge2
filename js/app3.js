@@ -67,14 +67,22 @@ document.getElementById('img-switch').addEventListener('click', function () {
   generateImage();
 });
 
-var EmailPic = (function (){
-  function EmailPic(email, pic) {
-    //_classCallCheck(this, EmailPic);
-    this.email = email;
-    this.pic = pic;
+// var EmailPic = (function (){
+//   function EmailPic(email, pic) {
+//     //_classCallCheck(this, EmailPic);
+//     this.email = email;
+//     this.pic = pic;
+//   }
+//   return EmailPic;
+// });
+
+class EmailPic{
+  constructor(email, pic){
+      this.email = email;
+      this.pic = pic;
   }
-  return EmailPic;
-});
+  
+}
 
 var profiles = [];
 var profileDivs = []; //recieves user email input

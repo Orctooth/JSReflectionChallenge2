@@ -5,6 +5,8 @@ var __webpack_exports__ = {};
 // import "core-js/stable";
 // import "regenerator-runtime/runtime";
 
+function _classCallCheck2(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var picsumID;
 var url;
 var mainImage = document.getElementById('image');
@@ -62,16 +64,20 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 document.getElementById('img-switch').addEventListener('click', function () {
   generateImage();
-});
+}); // var EmailPic = (function (){
+//   function EmailPic(email, pic) {
+//     //_classCallCheck(this, EmailPic);
+//     this.email = email;
+//     this.pic = pic;
+//   }
+//   return EmailPic;
+// });
 
-var EmailPic = function EmailPic() {
-  function EmailPic(email, pic) {
-    //_classCallCheck(this, EmailPic);
-    this.email = email;
-    this.pic = pic;
-  }
+var EmailPic = function EmailPic(email, pic) {
+  _classCallCheck2(this, EmailPic);
 
-  return EmailPic;
+  this.email = email;
+  this.pic = pic;
 };
 
 var profiles = [];

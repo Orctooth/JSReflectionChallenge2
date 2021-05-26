@@ -37,9 +37,9 @@ html {
 }
 
 header {
-  height: 80px;
+  height: 100px;
   background: #66CC00;
-  padding: 40px 30px;
+  padding: 0px 20px;
   margin: 0 0;
   width: 100%;
   position: fixed;
@@ -71,6 +71,11 @@ main > img, main button, main form {
   display: block;
   margin: 0 auto;
 }
+@-moz-document url-prefix() {
+  main > img, main button, main form {
+    margin-top: 30px;
+  }
+}
 main > img {
   height: 300px;
   width: 300px;
@@ -91,21 +96,20 @@ main > button {
 }
 
 #sub-holder {
-  display: block;
+  margin-top: 100px;
   width: 100%;
 }
 #sub-holder > #submissions {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 30px 30px;
-  margin: 0 auto;
+  margin: 0 0;
   background: #CCFF99;
-  -webkit-box-shadow: 10px -10px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px -10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px -10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px -10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 #sub-holder > #submissions > div {
