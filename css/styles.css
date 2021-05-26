@@ -3,7 +3,8 @@
 }
 * img {
   border-radius: 50%;
-  box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
 }
 * h1 {
   font-family: "Nerko One", cursive;
@@ -51,13 +52,19 @@ header > h1 {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0px auto;
   margin-top: 200px;
   text-align: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 main > img, main button, main form {
   margin-top: 30px;
@@ -67,7 +74,6 @@ main > img, main button, main form {
 main > img {
   height: 300px;
   width: 300px;
-  opacity: 0;
 }
 main > form {
   width: 300px;
@@ -90,12 +96,16 @@ main > button {
 }
 #sub-holder > #submissions {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 30px 30px;
   margin: 0 auto;
   background: #CCFF99;
-  box-shadow: 10px -10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px -10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px -10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 #sub-holder > #submissions > div {
@@ -106,5 +116,3 @@ main > button {
 #sub-holder > #submissions > div > img {
   margin-top: 20px;
 }
-
-/*# sourceMappingURL=styles.css.map */

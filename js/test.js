@@ -31,31 +31,33 @@ function switchImage(newURL) {
 
 var rando;
 
+// function generateImage() {
+//   axios.get('https://picsum.photos/200')
+//   .then(function(response){
+//     picsumID = response.headers['picsum-id'];
+//     console.log(picsumID);
+//     url = 'https://picsum.photos/id/' + picsumID + '/200';
+//     mainImage.src = url;
+//     console.log(url);
+//   })
+//   .catch(function(error){
+//     alert('There is an error, please refresh the page');
+//   });
+// }
+
+
 function generateImage() {
   axios.get('https://picsum.photos/200')
-  .then(function(response){
+  .then(function (response) {
     picsumID = response.headers['picsum-id'];
-    console.log(picsumID);
     url = 'https://picsum.photos/id/' + picsumID + '/200';
     mainImage.src = url;
-    console.log(url);
-  })
-  .catch(function(error){
+    mainImage.style.opacity = 1;
+  }).catch(function (error) {
     alert(error);
+    mainImage.src = 'img\romson-preechawit-Vy2cHqm0mCs-unsplash.jpg';
   });
-}
-
-// function generateImage() {
-//   axios.get("https://picsum.photos/200").then(function (response) {
-//     console.log(response.headers['picsum-id']);
-//     mainImage.src = "https://picsum.photos/200";
-//     mainImage.style.opacity = 1;
-//   }).catch(function (error) {
-//     alert(error);
-//     mainImage.src = "img\romson-preechawit-Vy2cHqm0mCs-unsplash.jpg";
-//     mainImage.style.opacity = 1;
-//   });
-// } //async image randomiser
+} //async image randomiser
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('first image');
@@ -64,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.getElementById('img-switch').addEventListener('click', function () {
+  console.log('new image');
   generateImage();
 });
 
