@@ -67,6 +67,7 @@ main > img, main button, main form {
 main > img {
   height: 300px;
   width: 300px;
+  opacity: 0;
 }
 main > form {
   width: 300px;
