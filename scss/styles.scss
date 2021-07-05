@@ -5,9 +5,10 @@
     }
     font-family: 'Roboto', sans-serif;
 
-    h1{
+    h1, h3{
         font-family: 'Nerko One', cursive;
         font-size: 64px;
+        margin: 0 auto;
     }
 
     button{
@@ -93,7 +94,11 @@ main{
     }
     & > button{
         width: 150px;
+        &:first-of-type{
+            width: 150px;
+        }
     }
+    
 }
 
 #sub-holder{
@@ -111,11 +116,14 @@ main{
         text-align: center;
         & > div{
             display: block;
-            width: 20%;
+            width: 100%;
             margin: 20px auto;
+            border: 5px solid #fff;
+            border-radius: 20px;
             
             & > img{
                 margin-top: 20px;
+                margin: 15px 30px;
             }
         }
     }
