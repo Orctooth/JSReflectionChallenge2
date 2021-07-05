@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+        <title>Pic-a-Pic</title>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Roboto&display=swap" rel="stylesheet">
@@ -13,8 +14,8 @@
         </header>
         <main>
             <!-- pic obtained from site -->
-            <img id ="image" src="img\romson-preechawit-Vy2cHqm0mCs-unsplash.jpg" alt="random-image"><br>
-            <button id="img-switch">Get a different image</button>
+            <img id ="image" src="img/romson-preechawit-Vy2cHqm0mCs-unsplash.jpg" alt="random-image"><br>
+            <button id="img-switch">GET NEW IMAGE</button>
 
             <form onsubmit="return false">
                 <label for="email">Type your email below to assign the image displayed above.</label><br>
@@ -23,13 +24,16 @@
             <button id="submit">SUBMIT</button>
             <div id="sub-holder">
                 <section id="submissions">
+                    <h3>SUBMISSIONS</h3>
                     <!-- user submitted pictures go here -->
                 </section>
             </div>
             
         </main>
         <script src="//cdn.polyfill.io/v2/polyfill.min.js"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+        <script src="js/axios.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js%22%3E</script> -->
         <script src="js/app3-dist.js"></script>
 
     </body>
